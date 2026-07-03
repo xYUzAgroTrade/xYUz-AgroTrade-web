@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-xyuz-bg: #0B0F17;
+  --color-xyuz-card: #111827;
+  --color-xyuz-card-light: #1F2937;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0B0F17 !important;
+  color: #F3F4F6 !important;
+  display: block;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+div, main, section {
+  box-sizing: border-box;
+}
