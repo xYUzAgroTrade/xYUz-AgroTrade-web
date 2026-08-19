@@ -1,5 +1,5 @@
 // src/screens/FundamentalAnalysisScreen.tsx
-import React from 'react';
+import type React from 'react';
 import { BalanceDemandCard } from '../components/dashboard/BalanceDemandCard';
 import { LogisticRiskCard } from '../components/dashboard/LogisticRiskCard';
 import { ParityCalculator } from '../components/dashboard/ParityCalculator'; // Calculadora CBOT integrada

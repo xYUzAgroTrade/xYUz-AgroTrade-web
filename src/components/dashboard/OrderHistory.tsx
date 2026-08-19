@@ -1,5 +1,5 @@
 // src/components/dashboard/OrderHistory.tsx
-import React from 'react';
+import type React from 'react';
 import { useTrade } from '../../context/TradeContext';
 
 export const OrderHistory: React.FC = () => {

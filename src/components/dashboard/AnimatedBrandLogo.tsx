@@ -1,5 +1,5 @@
 // src/components/dashboard/AnimatedBrandLogo.tsx
-import React from 'react';
+import type React from 'react';
 
 export const AnimatedBrandLogo: React.FC = () => {
   return (

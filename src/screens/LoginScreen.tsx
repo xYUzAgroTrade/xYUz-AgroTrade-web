@@ -1,5 +1,6 @@
 // src/screens/LoginScreen.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 interface LoginScreenProps {
   onLoginSuccess: () => void;

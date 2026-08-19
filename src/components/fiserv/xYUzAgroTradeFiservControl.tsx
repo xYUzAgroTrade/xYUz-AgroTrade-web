@@ -1,8 +1,9 @@
-// src/components/fiserv/xYUzAgroTradeFiservControl.tsx
-import React, { useState } from 'react';
+// src/components/fiserv/XYUzAgroTradeFiservControl.tsx
+import type React from 'react';
+import { useState } from 'react';
 import { pspList as initialPsps } from '../../mocks/fiservHubMock';
 
-export const xYUzAgroTradeFiservControl: React.FC = () => {
+export const XYUzAgroTradeFiservControl: React.FC = () => {
   const [psps, setPsps] = useState(initialPsps);
 
   const togglePspHealth = (id: string) => {
@@ -18,7 +19,7 @@ export const xYUzAgroTradeFiservControl: React.FC = () => {
   return (
     <div className="w-full bg-[#1A365D]/5 p-4 rounded-xl border border-[#1A365D]/10">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-bold text-xyuz-navy tracking-wide uppercase">Orquestração Multi-PSP xYUz-AgroTrade</h3>
+        <h3 className="text-sm font-bold text-xyuz-navy tracking-wide uppercase">Orquestracao Multi-PSP xYUz-AgroTrade</h3>
         <span className="text-xs bg-xyuz-blue text-white px-2 py-0.5 rounded-full font-mono">Fiserv HUB Cloud</span>
       </div>
       

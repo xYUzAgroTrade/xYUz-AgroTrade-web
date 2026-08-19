@@ -1,5 +1,5 @@
 // src/components/fiserv/KycProfileData.tsx
-import React from 'react';
+import type React from 'react';
 
 export const KycProfileData: React.FC = () => {
   return (

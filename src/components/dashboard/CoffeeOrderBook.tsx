@@ -1,5 +1,5 @@
 // src/components/dashboard/CoffeeOrderBook.tsx
-import React from 'react';
+import type React from 'react';
 
 export const CoffeeOrderBook: React.FC = () => {
   return (

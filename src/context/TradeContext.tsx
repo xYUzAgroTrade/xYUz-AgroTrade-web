@@ -1,5 +1,6 @@
 // src/context/TradeContext.tsx
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import type React from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 interface NewsArticle {
   id: number;

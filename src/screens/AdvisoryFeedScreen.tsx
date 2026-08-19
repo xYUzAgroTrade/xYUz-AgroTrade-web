@@ -1,5 +1,5 @@
 // src/screens/AdvisoryFeedScreen.tsx
-import React from 'react';
+import type React from 'react';
 import { useTrade } from '../context/TradeContext';
 import { GlassCard } from '../components/common/GlassCard';
 

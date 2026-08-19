@@ -1,5 +1,6 @@
 // src/components/fiserv/WhitelistIpManager.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 export const WhitelistIpManager: React.FC = () => {
   const [ips, setIps] = useState<string[]>(['186.234.12.98', '201.45.198.34']);

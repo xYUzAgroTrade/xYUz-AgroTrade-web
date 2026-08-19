@@ -1,5 +1,6 @@
 // src/screens/DashboardView.tsx
-import React, { useState, useEffect } from 'react';
+import type React from 'react';
+import { useState, useEffect } from 'react';
 
 export const DashboardView: React.FC = () => {
   const [prices, setPrices] = useState({

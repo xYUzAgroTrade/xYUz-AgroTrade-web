@@ -1,5 +1,6 @@
 // src/screens/InvestorProfileScreen.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { KycProfileData } from '../components/fiserv/KycProfileData';
 import { BrokerageNotePrint } from '../components/fiserv/BrokerageNotePrint';
 

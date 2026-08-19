@@ -1,5 +1,5 @@
 // src/components/common/Layout.tsx
-import React from 'react';
+import type React from 'react';
 import { useTrade } from '../../context/TradeContext';
 import { AnimatedBrandLogo } from '../dashboard/AnimatedBrandLogo';
 import { TabBarNavigation } from './TabBarNavigation';

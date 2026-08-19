@@ -1,5 +1,5 @@
 // src/components/dashboard/BalanceDemandCard.tsx
-import React from 'react';
+import type React from 'react';
 
 export const BalanceDemandCard: React.FC = () => {
   return (

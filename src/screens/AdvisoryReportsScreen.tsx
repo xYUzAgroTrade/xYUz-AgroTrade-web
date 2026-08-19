@@ -1,5 +1,5 @@
 // src/screens/AdvisoryReportsScreen.tsx
-import React from 'react';
+import type React from 'react';
 import { ReportRowCard } from '../components/dashboard/ReportRowCard';
 import { AuditSummaryCard } from '../components/dashboard/AuditSummaryCard';
 import { securityExport } from '../services/SecurityExportService'; // Importado

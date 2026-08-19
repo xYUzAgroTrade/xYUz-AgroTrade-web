@@ -1,5 +1,5 @@
 // src/components/fiserv/InvoiceHistoryTable.tsx
-import React from 'react';
+import type React from 'react';
 
 interface Invoice {
   txid: string;

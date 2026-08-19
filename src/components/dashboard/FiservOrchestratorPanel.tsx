@@ -1,5 +1,6 @@
 // src/components/dashboard/FiservOrchestratorPanel.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { pspList as initialPsps } from '../../mocks/fiservHubMock';
 
 export const FiservOrchestratorPanel: React.FC = () => {

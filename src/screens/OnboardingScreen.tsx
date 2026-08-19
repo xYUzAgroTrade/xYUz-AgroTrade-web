@@ -1,5 +1,5 @@
 // src/screens/OnboardingScreen.tsx
-import React from 'react';
+import type React from 'react';
 import { useTrade } from '../context/TradeContext';
 
 export const OnboardingScreen: React.FC = () => {

@@ -1,5 +1,5 @@
 // src/components/dashboard/CandlestickChart.tsx
-import React from 'react';
+import type React from 'react';
 
 export const CandlestickChart: React.FC = () => {
   const data = [

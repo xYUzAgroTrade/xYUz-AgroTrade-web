@@ -1,5 +1,5 @@
 // src/components/dashboard/OrderBook.tsx
-import React from 'react';
+import type React from 'react';
 
 export const OrderBook: React.FC = () => {
   return (

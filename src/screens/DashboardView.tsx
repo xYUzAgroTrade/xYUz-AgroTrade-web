@@ -1,5 +1,6 @@
-﻿// src/screens/DashboardView.tsx
-import React, { useState, useEffect } from 'react';
+// src/screens/DashboardView.tsx
+import type React from 'react';
+import { useState, useEffect } from 'react';
 
 export const DashboardView: React.FC = () => {
   const [prices, setPrices] = useState({
@@ -30,7 +31,7 @@ export const DashboardView: React.FC = () => {
   return (
     <div className="w-full text-white space-y-6">
       
-      {/* Grid de Cartões de Commodities */}
+      {/* Grid de Cartoes de Commodities */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
         
         {/* Card Soja */}
@@ -52,7 +53,7 @@ export const DashboardView: React.FC = () => {
           <div className="flex justify-between items-start w-full">
             <div>
               <span className="text-[11px] font-mono font-bold text-emerald-400 tracking-wider block mb-1">MILHO-PR</span>
-              <h4 className="text-sm font-bold text-white font-sans">Milho Paranaguá</h4>
+              <h4 className="text-sm font-bold text-white font-sans">Milho Paranagua</h4>
             </div>
             <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-red-500/10 text-red-400">-0.80%</span>
           </div>
@@ -61,12 +62,12 @@ export const DashboardView: React.FC = () => {
           </div>
         </div>
 
-        {/* Card Café */}
+        {/* Card Cafe */}
         <div className="bg-xyuz-card-light border border-gray-800 p-6 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[140px]">
           <div className="flex justify-between items-start w-full">
             <div>
               <span className="text-[11px] font-mono font-bold text-emerald-400 tracking-wider block mb-1">CAFE-AR</span>
-              <h4 className="text-sm font-bold text-white font-sans">Café Arábica Tipo 6</h4>
+              <h4 className="text-sm font-bold text-white font-sans">Cafe Arabica Tipo 6</h4>
             </div>
             <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-green-500/10 text-green-400">+2.10%</span>
           </div>
@@ -77,9 +78,9 @@ export const DashboardView: React.FC = () => {
 
       </div>
 
-      {/* Gráfico Vetorial SVG */}
+      {/* Grafico Vetorial SVG */}
       <div className="bg-xyuz-card border border-gray-800 p-6 rounded-2xl shadow-xl w-full">
-        <h3 className="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono mb-4">// GRÁFICO TÉCNICO (VETORIAL NATIVO)</h3>
+        <h3 className="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono mb-4">// GRAFICO TECNICO (VETORIAL NATIVO)</h3>
         <div className="w-full bg-xyuz-bg rounded-xl p-4 border border-gray-800 flex justify-center">
           <svg viewBox="0 0 210 200" className="w-full max-h-48 overflow-visible">
             <line x1="0" y1="40" x2="210" y2="40" stroke="#374151" strokeWidth="0.75" strokeDasharray="3" />

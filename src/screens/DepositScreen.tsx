@@ -1,5 +1,6 @@
 // src/screens/DepositScreen.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { useTrade } from '../context/TradeContext';
 import { LimitsCard } from '../components/fiserv/LimitsCard';
 import { InvoiceHistoryTable } from '../components/fiserv/InvoiceHistoryTable';

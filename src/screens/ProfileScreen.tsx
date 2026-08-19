@@ -1,5 +1,5 @@
 // src/screens/ProfileScreen.tsx
-import React from 'react';
+import type React from 'react';
 import { CredentialCard } from '../components/fiserv/CredentialCard';
 import { WhitelistIpManager } from '../components/fiserv/WhitelistIpManager';
 import { securityExport } from '../services/SecurityExportService'; // Importação adicionada

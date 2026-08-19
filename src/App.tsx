@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Layout } from './components/common/Layout';
 import { DashboardView } from './screens/DashboardView';
 import { AdvisoryFeedScreen } from './screens/AdvisoryFeedScreen';

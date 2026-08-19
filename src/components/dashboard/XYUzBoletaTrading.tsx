@@ -1,5 +1,6 @@
 // src/components/dashboard/XYUzBoletaTrading.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import { TradingTicketForm } from './TradingTicketForm';
 import { FiservOrchestratorPanel } from './FiservOrchestratorPanel';
 import { OrderHistory } from './OrderHistory';

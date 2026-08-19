@@ -1,5 +1,6 @@
 // src/components/dashboard/FobParitySimulator.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 export const FobParitySimulator: React.FC = () => {
   const [premium, setPremium] = useState<number>(1.25);

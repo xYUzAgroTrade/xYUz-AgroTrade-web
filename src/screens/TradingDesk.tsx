@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 // Corrija a importação para o novo nome com X maiúsculo
 import { XYUzBoletaTrading } from '../components/dashboard/XYUzBoletaTrading';
 

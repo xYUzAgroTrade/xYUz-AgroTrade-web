@@ -1,5 +1,5 @@
 // src/components/dashboard/AuditSummaryCard.tsx
-import React from 'react';
+import type React from 'react';
 
 export const AuditSummaryCard: React.FC = () => {
   return (

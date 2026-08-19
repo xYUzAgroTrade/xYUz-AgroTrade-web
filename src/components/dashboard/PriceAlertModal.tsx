@@ -1,5 +1,6 @@
 // src/components/dashboard/PriceAlertModal.tsx
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 
 interface PriceAlertModalProps {
   isOpen: boolean;
