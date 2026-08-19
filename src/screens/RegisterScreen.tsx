@@ -1,3 +1,4 @@
+﻿import { feedback } from '../services/feedback';
 // src/screens/RegisterScreen.tsx
 import type React from 'react';
 import { useState } from 'react';
@@ -12,7 +13,7 @@ export const RegisterScreen: React.FC<RegisterScreenProps> = ({ onNavigateToLogi
 
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Solicitação de cadastro encaminhada para a mesa de compliance xYUz. Análise de KYC/KYB em andamento.");
+    feedback.success('Cadastro enviado para analise');
     onNavigateToLogin();
   };
 

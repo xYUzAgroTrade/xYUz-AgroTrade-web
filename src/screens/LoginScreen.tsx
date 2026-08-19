@@ -1,3 +1,4 @@
+﻿import { feedback } from '../services/feedback';
 // src/screens/LoginScreen.tsx
 import type React from 'react';
 import { useState } from 'react';
@@ -18,13 +19,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess, onNavi
     if (email && password) {
       setStep('COMPLIANCE');
     } else {
-      alert("Por favor, preencha os dados da conta master xYUz.");
+      feedback.warning('Preencha todos os campos');
     }
   };
 
   const handleFinalSubmit = () => {
     if (!acceptedLgpd) {
-      alert("É obrigatório aceitar os termos de LGPD e Tutorial para acessar a mesa.");
+      feedback.warning('Aceite os termos para continuar');
       return;
     }
     onLoginSuccess();

@@ -1,3 +1,4 @@
+﻿import { feedback } from '../../services/feedback';
 // src/components/fiserv/WhitelistIpManager.tsx
 import type React from 'react';
 import { useState } from 'react';
@@ -13,7 +14,7 @@ export const WhitelistIpManager: React.FC = () => {
     // Validação estrita por Regex de endereço IP v4
     const ipRegex = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
     if (!ipRegex.test(newIp)) {
-      alert("Formato de endereço IPv4 inválido.");
+      feedback.error('Formato de IP invalido');
       return;
     }
 

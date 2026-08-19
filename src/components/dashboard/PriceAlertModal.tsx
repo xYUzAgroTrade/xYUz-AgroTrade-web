@@ -1,3 +1,4 @@
+﻿import { feedback } from '../../services/feedback';
 // src/components/dashboard/PriceAlertModal.tsx
 import type React from 'react';
 import { useState } from 'react';
@@ -34,7 +35,7 @@ export const PriceAlertModal: React.FC<PriceAlertModalProps> = ({ isOpen, onClos
 
         <button 
           onClick={() => {
-            alert(`Gatilho de proteção travado em BRL ${triggerPrice}`);
+            feedback.success('Alerta de preco configurado');
             onClose();
           }}
           className="w-full bg-emerald-500 hover:bg-emerald-600 text-[#0B0F17] font-black py-2.5 rounded-xl text-xs transition-colors shadow-lg"

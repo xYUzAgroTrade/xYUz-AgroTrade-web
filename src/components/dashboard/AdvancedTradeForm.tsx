@@ -1,3 +1,4 @@
+﻿import { feedback } from '../../services/feedback';
 // src/components/dashboard/AdvancedTradeForm.tsx
 import type React from 'react';
 import { useState } from 'react';
@@ -11,7 +12,7 @@ export const AdvancedTradeForm: React.FC = () => {
   const handleTrade = (type: 'COMPRA' | 'VENDA') => {
     const cost = lots * 164.50;
     if (type === 'COMPRA' && cost > balance) {
-      alert("Margem de garantia insuficiente em conta.");
+      feedback.error('Margem insuficiente');
       return;
     }
 
