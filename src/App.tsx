@@ -1,5 +1,5 @@
 // src/App.tsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout } from './components/common/Layout';
 import { DashboardView } from './screens/DashboardView';
 import { AdvisoryFeedScreen } from './screens/AdvisoryFeedScreen';
@@ -12,16 +12,34 @@ import { LoginScreen } from './screens/LoginScreen';
 import { RegisterScreen } from './screens/RegisterScreen';
 import { XYUzBoletaTrading } from './components/dashboard/XYUzBoletaTrading';
 import { TradeProvider } from './context/TradeContext';
+import { getAccessToken, clearTokens } from './services/apiClient';
 
 function AppContent() {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true); // Bypass ativo para visualização direta
+  // Autenticacao real: verifica se ha token valido na sessao
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    return !!getAccessToken();
+  });
   const [currentRoute, setCurrentRoute] = useState<string>('app');
   const [activeTab, setActiveTab] = useState<string>('dashboard');
 
+  // Verificar token ao montar (restaurar sessao)
+  useEffect(() => {
+    const token = getAccessToken();
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
   const handleLogout = () => {
+    clearTokens();
     setIsAuthenticated(false);
     setCurrentRoute('login');
     setActiveTab('dashboard');
+  };
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true);
+    setCurrentRoute('app');
   };
 
   if (!isAuthenticated) {
@@ -30,10 +48,7 @@ function AppContent() {
     }
     return (
       <LoginScreen 
-        onLoginSuccess={() => {
-          setIsAuthenticated(true);
-          setCurrentRoute('app');
-        }} 
+        onLoginSuccess={handleLoginSuccess} 
         onNavigateToRegister={() => setCurrentRoute('register')}
       />
     );
