@@ -239,9 +239,38 @@ export const api = {
 
   // Advisory
   getAdvisoryArticles: (limit: number = 20) =>
-    apiRequest<{ data: Array<{ id: string; tag: string; title: string; excerpt: string; author: string; publishedAt: string }> }>(
-      `/v1/advisory/articles?limit=${limit}`
+    apiRequest<{ data: Array<{ id: string; tag: string; title: string; excerpt: string; summary?: string; author: string; url?: string; publishedAt: string }> }>(
+      `/v1/advisory/articles?limit=${limit}`, { skipAuth: true }
     ),
+
+  getAdvisoryReports: () =>
+    apiRequest<{ data: Array<{ id: string; title: string; size: string; desc: string; downloadUrl?: string }> }>(
+      '/v1/advisory/reports', { skipAuth: true }
+    ),
+
+  // Orders (trading) — contrato do AgroTrade-api /v1/orders
+  createOrder: (input: {
+    commodity: 'SOYA' | 'CORN' | 'COFFEE';
+    side: 'BUY' | 'SELL';
+    volumeTons: number;
+    executionType: 'MARKET' | 'LIMIT';
+    pricePerTon?: number;
+    marginAllocatedMinor?: number;
+  }) =>
+    apiRequest<{ data: unknown }>('/v1/orders', {
+      method: 'POST',
+      body: input,
+      idempotencyKey: crypto.randomUUID()
+    }),
+
+  listOrders: () =>
+    apiRequest<{ data: Array<Record<string, unknown>> }>('/v1/orders'),
+
+  getOrder: (orderId: string) =>
+    apiRequest<{ data: Record<string, unknown> }>(`/v1/orders/${orderId}`),
+
+  cancelOrder: (orderId: string) =>
+    apiRequest<{ data: Record<string, unknown> }>(`/v1/orders/${orderId}/cancel`, { method: 'POST' }),
 
   // Health
   health: () =>
