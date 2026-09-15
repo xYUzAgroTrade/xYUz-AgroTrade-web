@@ -20,6 +20,10 @@ npm run dev
 
 Requer API rodando em `http://localhost:3000` (xYUz-AgroTrade-api).
 
+> **Pagamentos:** o front fala **sempre com o xYUz-AgroTrade-api**, nunca direto com a
+> Yupay. Quem decide usar a orquestracao Yupay ou o simulador e o `-api` (via
+> `YUPAY_ENABLED`). Assim o front fica desacoplado da camada de pagamento.
+
 ## Build de Producao
 
 ```bash
@@ -49,8 +53,8 @@ Container roda nginx como usuario nao-root na porta 8080 com:
 |------|--------|
 | Dashboard | Precos real-time, grafico candlestick, market cards |
 | Trading | Boleta de ordens (BUY/SELL), order book, historico |
-| Advisory Feed | Artigos de inteligencia de mercado |
-| Reports | Relatorios para download |
+| Advisory Feed | Artigos de inteligencia de mercado (API: `/v1/advisory/articles`) |
+| Reports | Relatorios para download (API: `/v1/advisory/reports`) |
 | Fundamental | Calculadora de paridade FOB/CBOT, oferta e demanda |
 | Deposit | Gerar PIX para deposito de margem |
 | Investor Profile | Suitability, limites operacionais |
@@ -58,8 +62,8 @@ Container roda nginx como usuario nao-root na porta 8080 com:
 
 ## Checklist para Producao
 
-- [x] Build passa (0 erros TS, 0 erros lint)
-- [x] npm audit (0 vulnerabilidades)
+- [x] Build passa (0 erros TS; lint com 2 warnings cosmeticos de fast-refresh)
+- [ ] npm audit sem vulnerabilidades (ha alertas em deps transitivas — revisar antes do go-live)
 - [x] Segredos removidos do bundle
 - [x] Dockerfile seguro (nao-root, headers, healthcheck)
 - [x] strict: true no tsconfig
